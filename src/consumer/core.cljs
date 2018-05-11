@@ -2,5 +2,7 @@
   (:require [producer.core :as producer]))
 
 (defn -main [& args]
-  (prn (producer/my-inc 3))
-  (prn (producer/my-inc-direct 5)))
+  (prn (producer/reverse-lookup (zipmap "123" "abc") \b))
+  (prn (producer/reverse-lookup (zipmap "123" "abc") nil))
+  (prn (producer/reverse-lookup' (zipmap "123" "abc") \b))
+  (prn (producer/reverse-lookup' (zipmap "123" "abc") nil)))

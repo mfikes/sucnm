@@ -1,8 +1,9 @@
 (ns producer.core)
 
-(defmacro my-inc [x]
-  `(my-inc* ~x))
+(defmacro reverse-lookup [m v]
+  `(when-some [v# ~v]
+     (get (inverse* ~m) v#)))
 
-;; Use directly, relying on require side-effect
-(defmacro my-inc-direct [x]
-  `(third.core/foo ~x))
+(defmacro reverse-lookup' [m v]
+  `(when-some [v# ~v]
+     (get (clojure.set/map-invert ~m) v#)))

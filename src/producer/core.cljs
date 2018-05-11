@@ -1,6 +1,8 @@
 (ns producer.core
   (:require-macros [producer.core])
-  (:require [third.core :as third]))
+  (:require [clojure.set]))
 
-(defn my-inc* [x]
-  (third/foo x))
+(defn inverse* [m]
+  (into {} (map (fn [[k v]]
+                  [v k])
+             m)))
