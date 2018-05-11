@@ -4,6 +4,3 @@
 
 (defn my-inc* [x]
   (third/foo x))
-
-(defn my-inc-fn [x]
-  (third/foo x))
