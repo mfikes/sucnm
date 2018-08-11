@@ -1,4 +1,4 @@
-(ns producer.core)
+(ns lib.core)
 
 (defmacro reverse-lookup [m v]
   `(when-some [v# ~v]

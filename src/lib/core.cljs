@@ -1,5 +1,5 @@
-(ns producer.core
-  (:require-macros [producer.core])
+(ns lib.core
+  (:require-macros [lib.core])
   (:require [clojure.set]))
 
 (defn inverse* [m]
